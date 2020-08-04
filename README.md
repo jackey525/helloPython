@@ -26,3 +26,6 @@ http://localhost:5000
 
 # k8s 部份
 
+$ kubectl apply -f deployment.yaml
+
+$ kubectl get pods
