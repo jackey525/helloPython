@@ -35,10 +35,32 @@ $ docker run -p 5000:5000 hello-python
 http://localhost:5000
 
 
-### k8s 部份
+### k8s 部份 （minikube ＋ 本機的 docker images)
 
 $ kubectl apply -f deployment.yaml
 
 $ kubectl get pods
 
 $ minikube service hello-python-service  --url
+
+
+### k8s 部份(自建 k8s ＋ docker hub)
+
+#### 先上傳 docker image 到 docker hub
+
+```
+$ docker login
+$ docker tag hello-python jackylin525/hello-python
+$ docker push jackylin525/hello-python
+```
+#### 修改  deployment.yaml
+```
+  containers:
+  - name: hello-python
+     image: jackylin525/hello-python
+     imagePullPolicy: Always
+     ports:
+     - containerPort: 5000
+```
+$ kubectl apply -f deployment.yaml
+
