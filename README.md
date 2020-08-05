@@ -62,8 +62,11 @@ $ docker push jackylin525/hello-python
      ports:
      - containerPort: 5000
 ```
+```
 $ kubectl apply -f deployment.yaml
+
 $ kubectl describe svc hello-python-service
+```
 ```
  % kubectl describe svc hello-python-service               
 Name:                     hello-python-service
@@ -80,5 +83,6 @@ Session Affinity:         None
 External Traffic Policy:  Cluster
 Events:                   <none>
 ```
+```
 $ curl 192.168.9.180:32062
-
+```
