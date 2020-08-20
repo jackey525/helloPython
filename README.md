@@ -1,5 +1,9 @@
 # helloPython
 
+### 加入 Python 學習的 trello
+https://trello.com/invite/b/e0fqCm7o/fc9a7e6fa416ecc281559781dab2b00b/python-%E5%AD%B8%E7%BF%92%E8%AA%B2%E7%A8%8B
+
+
 ### 本機執行
 
 ```
